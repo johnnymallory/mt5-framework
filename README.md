@@ -39,13 +39,6 @@ Requirements
 - MetaTrader 5
 - Python 3.11
 
-### Recommendations
-- This framework works with an event-driven workflow. Each module recieves a type of even from the previous module and puts its own kind of event on queue
-- The main processes happen on the trading_app.py. The aim of this framework is that you can switch completly different strategies by modifying one line of code
-- It is recommended to run a virtual environmet with anaconda
-- The python library metatrader5 has builtin functions written and compiled in C so the binaries just work on Windows
-- You can deploy your strategies with this framework with cloud VPS like AWS EC2 so they are working 24/7
-
 ## MODULES
 
 ### Trading App
@@ -74,6 +67,13 @@ The Portfolio module tracks and manages the performance of trading positions and
 
 ### Utils
 The Utils module contains utility functions and helper classes used across the framework. It includes common functionalities such as date/time manipulation, logging utilities, data visualization tools, and other miscellaneous tools to support trading operations.
+
+## Recommendations
+- This framework has an event-driven workflow. Each module recieves a type of even from the previous module and puts its own kind of event on queue.
+- The main processes happen on the trading_app.py. The aim of this framework is that you can switch completly different strategies by modifying one line of code.
+- It is recommended to run a virtual environment with anaconda. Select python version 3.11 and install requirements.txt.
+- It is mandatory to use Windows as OS. The python library metatrader5 has builtin functions written and compiled in C so the binaries just work on Windows.
+- You can deploy your strategies with this framework on a cloud environment like AWS EC2 so they are working 24/7.
 
 ## SOLID Principles
 - Single Responsibility Principle: Each class in the framework has a single responsibility.
